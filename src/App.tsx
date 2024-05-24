@@ -2,7 +2,6 @@ import React from 'react'
 // import Todo from './Components/Todo'
 import Data from './Components/Data'
 import Input from './Components/Input'
-import Quiz from './Components/Quiz'
 
 const App = () => {
   const style1  = {
@@ -25,18 +24,20 @@ const App = () => {
   }
   return (
     <>
- {/* <Data  btnName='Login'  style={style1}  btnClick={()=>{
-  console.log("Login")
- }} />
- <Data  btnName='SignUp'   style={style2} />
- <Data  btnName='Register'  style={style3} btnClick={()=>{
-  console.log("Registered")
- }}  />
- <Input placeholder='Type Something' style={style1} value={(e:any)=>{
-  console.log(e.target.value)
- }} /> */}
 
- <Quiz />
+    <Data  btnName={'Login'} btnClick={()=>{
+      alert('Login')
+    }} className={style1} />
+    <Data  btnName={'Sign Up'} btnClick={()=>{
+      alert('Sign Up')
+    }} className={style2} />
+    <Data  btnName={'Register'} btnClick={()=>{
+      alert('Register')
+    }} className={style3} />
+
+   <Input placeholder={'Type Something'} btnInp={(e:any)=>{
+    console.log(e.target.value)
+   }}  className={style2} />
 
  </>
   )

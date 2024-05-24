@@ -2,15 +2,16 @@
 import React, { useState } from 'react'
 // import image from './image/logo (2).jpg'
 
-const Data = (props: {
-    btnName?:string,
-    btnClick?:()=>void,
-    // className?:any
-    style?:any
-}) => {
-    const {btnClick,btnName,style} = props
-    const {backgroundColor,border,margin,padding} = style
-    // console.log(backgroundColor)
+const Data = (props:{
+          btnName:string,
+          btnClick:()=>void,
+          className:any
+})=>{
+
+    const {btnName,btnClick,className} = props
+
+
+    const {backgroundColor,border,margin,padding} = className
     
 //     let data = [
 //         {
@@ -298,13 +299,14 @@ const Data = (props: {
     
         
             
-            <button  className={`${backgroundColor} ${border} ${margin} ${padding} `}   onClick={btnClick}>{btnName}</button>
             
    {/* </div> */}
 
+     <button onClick={btnClick}  className={`${backgroundColor} ${border} ${margin} ${padding}`}  >{btnName}</button>
 
-    </>
+     </>
   )
+
 
    
 
