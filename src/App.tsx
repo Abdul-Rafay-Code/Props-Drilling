@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+// import Todo from './Components/Todo'
+import Data from './Components/Data'
+import Input from './Components/Input'
+import Quiz from './Components/Quiz'
 
-function App() {
+const App = () => {
+  const style1  = {
+    backgroundColor : 'bg-blue-500',
+    border: 'rounded-xl',
+    margin: 'm-2',
+    padding: 'p-2'
+  }
+  const style2  = {
+    backgroundColor : 'bg-slate-500',
+    border: 'rounded-xl',
+    margin: 'm-2',
+    padding: 'p-2'
+  }
+  const style3  = {
+    backgroundColor : 'bg-orange-500',
+    border: 'rounded-xl',
+    margin: 'm-2',
+    padding: 'p-2'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+ {/* <Data  btnName='Login'  style={style1}  btnClick={()=>{
+  console.log("Login")
+ }} />
+ <Data  btnName='SignUp'   style={style2} />
+ <Data  btnName='Register'  style={style3} btnClick={()=>{
+  console.log("Registered")
+ }}  />
+ <Input placeholder='Type Something' style={style1} value={(e:any)=>{
+  console.log(e.target.value)
+ }} /> */}
+
+ <Quiz />
+
+ </>
+  )
 }
 
-export default App;
+export default App 
